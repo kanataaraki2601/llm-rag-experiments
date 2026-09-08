@@ -1,5 +1,5 @@
 import time
-from ollama_provider import OllamaProvider
+from ollama_chat_client import OllamaProvider
 
 DEFAULT_MODEL = "gemma3:1b"
 
@@ -26,7 +26,7 @@ def call_llm(prompt: dict) -> dict:
         model=provider.model,
         messages=messages,
         options={
-            "temperature": prompt["temparature"],
+            "temperature": prompt["temperature"],
         },
     )
 
